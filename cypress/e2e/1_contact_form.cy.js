@@ -3,7 +3,7 @@ import {
   generateUserEmail,
   generateUserMessage,
 } from "../support/consts/generators";
-import { placeholdersText, labelsText } from "../support/consts/definitions";
+import { placeholdersText, labelsText, headersText } from "../support/consts/definitions";
 
 describe("Contact Form Functionality and Sending Inquiry", () => {
   before(() => {
@@ -20,7 +20,7 @@ describe("Contact Form Functionality and Sending Inquiry", () => {
       .url()
       .should("include", "/get-in-touch");
 
-    cy.get("h1").should("be.visible").and("have.text", "Get in touch");
+    cy.get("h1").should("be.visible").and("have.text", headersText.getInTouch);
 
     cy.get(inquiryForm.emailLabel)
       .should("be.visible")

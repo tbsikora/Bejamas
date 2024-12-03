@@ -1,0 +1,45 @@
+# Cypress Test Suite for Navigation and Contact Form
+
+This project contains end-to-end tests implemented using **Cypress JS**. The test suite verifies the functionality of the main navigation links and the contact form. A basic data-driven approach is used for scalability and maintainability.
+
+---
+
+## **Features Implemented**
+
+### **Main Navigation Tests**
+- Validates that clicking on each navigation link leads to the correct page.
+- Verifies the `<h1>` headers on the pages for expected content.
+- Handles dynamic modal interactions (e.g., navigating to the "Blog" page through the "Learn" modal).
+
+### **Contact Form Tests**
+- Verifies the presence of placeholders and labels for input fields.
+- Dynamically generates test data (email and message) using a simple generator.
+- Validates form submission and ensures fields are cleared afterward.
+
+---
+
+## **Technology Stack**
+- **Cypress JS**: End-to-end testing framework.
+- **JavaScript**: Test scripting and data management.
+
+---
+
+## **Data-Driven Approach**
+
+A basic data-driven approach is used by storing selectors, expected headers, and other reusable test data in separate files. This makes the test suite modular and easy to maintain.
+
+---
+
+## **Folder Structure**
+```plaintext
+/project
+|-- cypress/
+|   |-- e2e/
+|   |   |-- 1_contact_form.cy.js        # Tests for the contact form
+|   |   |-- 2_navigation.cy.js          # Tests for main navigation
+|   |-- support/
+|       |-- consts/
+|           |-- selectors.js            # Selectors for navigation and forms
+|           |-- definitions.js          # Test data (headers, placeholders, etc.)
+|           |-- generators.js           # Dynamic data generators
+|-- README.md                           # Project documentation
